@@ -24,10 +24,10 @@ function App() {
 
   const stages = [
     'PR Approved',
-    'Ordering PCBs',
-    'Printing your 3d Case!',
-    'Out for Shipping',
-    'Shipped :D ',
+    'Sending out Grant',
+    'Reviewing your PR',
+    'Not Reviewed',
+    'Super cool!',
   ];
 
   const navigate = useNavigate();
@@ -288,20 +288,20 @@ useEffect(() => {
                           <Link2 className="w-5 h-5 text-gray-400" />
                         </div>
                         <div className="flex items-center space-x-1">
-                          <span className="pl-10 text-gray-400 text-sm">github.com/hackclub/hackpad/pull/</span>
+                          <span className="pl-10 text-gray-400 text-sm">github.com/hackclub/onboard/pull/</span>
                           <input
                             id="pr-number"
                             name="pr-number"
                             type="text"
                             className="w-16 py-1.5 px-2 border border-gray-600 rounded-md bg-gray-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
                             placeholder="256"
-                            value={prUrl.replace('https://github.com/hackclub/hackpad/pull/', '')}
+                            value={prUrl.replace('https://github.com/hackclub/onboard/pull/', '')}
                             onKeyPress={(e) => {
                               if (!/[0-9]/.test(e.key)) {
                                 e.preventDefault();
                               }
                             }}
-                            onChange={(e) => setPrUrl('https://github.com/hackclub/hackpad/pull/' + e.target.value)}
+                            onChange={(e) => setPrUrl('https://github.com/hackclub/onboard/pull/' + e.target.value)}
                           />
                         </div>
                       </div>
@@ -335,12 +335,12 @@ useEffect(() => {
                     {!isAdmin && (
                       <div className="mt-8 space-y-4">
                         <div className="flex items-center space-x-2 text-blue-400">
-                          <h3 className="text-sm font-medium">Hackpad 3D Printing Live Stream</h3>
+                          <h3 className="text-sm font-medium">Onbord PCB's</h3>
                         </div>
                         <div className="relative pt-[56.25%] rounded-lg overflow-hidden">
                           <iframe
-                            src="https://www.youtube.com/embed/rmewn5hzLqs"
-                            title="Hackpad 3D Printing Live Stream"
+                            src="https://www.youtube.com/embed/iyj4bDlhWp4"
+                            title="Onboard PCB's"
                             className="absolute top-0 left-0 w-full h-full border-0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
